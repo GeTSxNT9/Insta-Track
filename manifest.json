@@ -1,21 +1,23 @@
 {
   "name": "INSTA TRACK ALPHA",
-  "short_name": "INSTA TRACK",
-  "start_url": "/Insta-Track/index.html",
+  "short_name": "InstaTrack",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
-  "description": "Herramienta de análisis de seguidores de Instagram (PWA).",
+  "description": "Herramienta de análisis de seguidores de Instagram.",
   "icons": [
     {
       "src": "https://api.dicebear.com/7.x/initials/svg?seed=I&backgroundColor=000000&textColor=ffffff&fontSize=60&fontWeight=700",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "https://api.dicebear.com/7.x/initials/svg?seed=I&backgroundColor=000000&textColor=ffffff&fontSize=60&fontWeight=700",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
   ]
 }
