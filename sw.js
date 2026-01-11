@@ -2,8 +2,7 @@ const CACHE_NAME = 'instatrack-cache-v1';
 const urlsToCache = [
   '/Insta-Track/',
   '/Insta-Track/index.html',
-  '/Insta-Track/manifest.json',
-  '/Insta-Track/icon.png'
+  '/Insta-Track/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
