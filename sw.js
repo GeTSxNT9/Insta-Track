@@ -1,4 +1,4 @@
-const CACHE_NAME = 'instatrack-cache-v1';
+const CACHE_NAME = 'instatrack-v1';
 const urlsToCache = [
   '/Insta-Track/',
   '/Insta-Track/index.html',
