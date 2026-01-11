@@ -8,14 +8,14 @@
   "description": "Herramienta de análisis de seguidores de Instagram (PWA).",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "https://api.dicebear.com/7.x/initials/svg?seed=I&backgroundColor=000000&textColor=ffffff&fontSize=50&fontWeight=700",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/svg+xml"
     },
     {
-      "src": "icon.png",
+      "src": "https://api.dicebear.com/7.x/initials/svg?seed=I&backgroundColor=000000&textColor=ffffff&fontSize=50&fontWeight=700",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/svg+xml"
     }
   ]
 }
