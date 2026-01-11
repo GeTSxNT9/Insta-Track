@@ -23,14 +23,15 @@
   .container { max-width: 1000px; width: 100%; background: var(--card); border-radius: var(--radius); padding:20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-top: 10px; }
   
   header { text-align: center; margin-bottom: 25px; }
-  /* Ajuste de h1: Título más grande, limpio y en mayúsculas */
   h1 { margin: 0; font-size: 26px; letter-spacing: -1px; font-weight: 800; text-transform: uppercase; }
 
-  .grid-upload { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; margin-bottom: 25px; }
-  .file-box { background: #f7f8fa; padding: 15px; border-radius: var(--radius); border: 2px dashed var(--border); transition: 0.2s; position: relative; text-align: center; }
-  .file-box label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 12px; color: var(--muted); text-transform: uppercase; }
-  .file-box input { font-size: 12px; width: 100%; }
+  /* Estilo simplificado para las cajas de archivos */
+  .grid-upload { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px; margin-bottom: 25px; }
+  .file-box { background: #f7f8fa; padding: 20px; border-radius: var(--radius); border: 2px dashed var(--border); transition: 0.2s; text-align: center; }
+  .file-box label { display: block; margin-bottom: 12px; font-weight: 800; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .file-box input { font-size: 11px; width: 100%; color: transparent; } /* Oculta el texto por defecto del input para mayor limpieza */
   .file-box.loaded { border-color: var(--success); background: #f0fdf4; border-style: solid; }
+  .file-box.loaded label { color: var(--success); }
   
   .main-actions { display:flex; gap:10px; margin-bottom: 30px; flex-wrap: wrap; }
   button { padding:12px 18px; border-radius:12px; border:none; cursor:pointer; font-weight:600; font-size: 14px; transition: 0.2s; display: flex; align-items: center; gap: 8px; justify-content: center; }
@@ -38,6 +39,7 @@
   .btn-outline { background: #fff; border: 1px solid var(--border); color: var(--text); flex: 1; }
   .btn-danger { background: #fff1f2; color: var(--danger); flex: 1; }
 
+  /* Resto de estilos se mantienen igual */
   .stats-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-bottom: 25px; }
   .stat-card { background: #fff; padding:15px; border-radius:var(--radius); text-align:center; border: 1px solid var(--border); }
   .stat-card span { font-size: 10px; color: var(--muted); text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px; }
@@ -45,27 +47,15 @@
   
   .grid-lists { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; }
   .column-title { margin-bottom: 12px; font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; }
-  
   .search-input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 12px; font-size: 14px; box-sizing: border-box; outline: none; transition: 0.2s; }
-  .search-input:focus { border-color: var(--accent); }
-  
-  .scroll-area { height: 400px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; background: #fafafa; scrollbar-width: thin; }
-  
-  .user-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; animation: fadeIn 0.3s ease; }
-  .user-tag { flex-grow: 1; padding: 10px 14px; background: #fff; color: var(--text); text-decoration: none; border-radius: 12px; font-size: 13px; border: 1px solid var(--border); transition: 0.15s; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .user-tag:hover { border-color: var(--accent); background: #f0f9ff; }
-  
-  .btn-ghost { padding: 10px; background: #fff; color: #adb5bd; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; line-height: 1; }
-  .btn-ghost:hover { color: var(--danger); border-color: var(--danger); background: #fff1f2; }
-  
-  textarea { width:100%; height:120px; padding:12px; border-radius:12px; border: 1px solid var(--border); font-family: 'Courier New', monospace; font-size: 12px; margin-bottom: 10px; box-sizing: border-box; resize: none; outline: none; }
+  .scroll-area { height: 400px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; background: #fafafa; }
+  .user-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .user-tag { flex-grow: 1; padding: 10px 14px; background: #fff; color: var(--text); text-decoration: none; border-radius: 12px; font-size: 13px; border: 1px solid var(--border); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .btn-ghost { padding: 10px; background: #fff; color: #adb5bd; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; }
+  textarea { width:100%; height:120px; padding:12px; border-radius:12px; border: 1px solid var(--border); font-size: 12px; margin-bottom: 10px; box-sizing: border-box; resize: none; outline: none; }
   .hidden { display:none !important; }
   .panel-ghost { margin-bottom: 25px; padding: 18px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); border-left: 4px solid var(--danger); }
-
-  #saveIndicator { position: fixed; top: 20px; right: 20px; background: var(--success); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; display: none; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-  @media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr 1fr; } .main-actions button { flex: unset; width: 100%; } }
+  #saveIndicator { position: fixed; top: 20px; right: 20px; background: var(--success); color: white; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; display: none; z-index: 1000; }
 </style>
 </head>
 <body>
@@ -79,12 +69,10 @@
   
   <div class="grid-upload">
     <div class="file-box" id="boxFollowing">
-      <label>Sigo a... (Following)</label>
-      <input id="fileFollowing" type="file" onchange="markLoaded('boxFollowing')" accept=".json,.html">
+      <label>FOLLOWING</label> <input id="fileFollowing" type="file" onchange="markLoaded('boxFollowing')" accept=".json,.html">
     </div>
     <div class="file-box" id="boxFollowers">
-      <label>Me siguen... (Followers)</label>
-      <input id="fileFollowers" type="file" onchange="markLoaded('boxFollowers')" accept=".json,.html">
+      <label>FOLLOWERS</label> <input id="fileFollowers" type="file" onchange="markLoaded('boxFollowers')" accept=".json,.html">
     </div>
   </div>
 
@@ -95,18 +83,8 @@
   </div>
 
   <div id="ghostManager" class="panel-ghost hidden">
-    <h3 style="margin-top:0; font-size: 15px; color: var(--danger);">Gestión de Excepciones (Whitelist)</h3>
-    <p style="font-size: 11px; color: var(--muted); margin-top: -10px; margin-bottom: 10px;">Los usuarios aquí listados no aparecerán en "No me siguen".</p>
-    <textarea id="ghostList" oninput="saveGhosts()" placeholder="Ejemplo:
-cristiano
-leomessi
-nasa"></textarea>
-    <div style="display:flex; gap:10px;">
-      <button onclick="downloadGhosts()" class="btn-outline" style="font-size:11px; flex: 1;">📥 Exportar TXT</button>
-      <label class="btn-outline" style="font-size:11px; padding: 10px; cursor: pointer; flex: 1; text-align: center;">
-        📤 Importar TXT <input type="file" style="display:none" accept=".txt" onchange="importGhosts(this)">
-      </label>
-    </div>
+    <h3 style="margin-top:0; font-size: 15px; color: var(--danger);">Gestión de Excepciones</h3>
+    <textarea id="ghostList" oninput="saveGhosts()" placeholder="Usuarios ignorados..."></textarea>
   </div>
 
   <div class="results hidden" id="results">
@@ -120,19 +98,18 @@ nasa"></textarea>
     <div class="grid-lists">
       <div>
         <div class="column-title">🚫 No me siguen</div>
-        <input type="text" class="search-input" placeholder="Filtrar por nombre..." onkeyup="filterList('notFollowingLinks', this.value)">
+        <input type="text" class="search-input" placeholder="Filtrar..." onkeyup="filterList('notFollowingLinks', this.value)">
         <div id="notFollowingLinks" class="scroll-area"></div>
       </div>
       
       <div>
         <div class="column-title">🤝 Seguimiento mutuo</div>
-        <button onclick="copyToClipboard('mutuals')" class="btn-outline" style="width:100%; margin-bottom:10px; font-size: 12px;">📋 Copiar nombres de usuarios</button>
         <textarea id="mutuals" readonly style="height:398px; background:#f8f9fa; color: var(--muted);"></textarea>
       </div>
       
       <div>
         <div class="column-title">⭐ Fans (No los sigo)</div>
-        <input type="text" class="search-input" placeholder="Filtrar por nombre..." onkeyup="filterList('iShouldFollowLinks', this.value)">
+        <input type="text" class="search-input" placeholder="Filtrar..." onkeyup="filterList('iShouldFollowLinks', this.value)">
         <div id="iShouldFollowLinks" class="scroll-area"></div>
       </div>
     </div>
@@ -140,16 +117,15 @@ nasa"></textarea>
 </div>
 
 <script>
+// Lógica de Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Asegúrate de que sw.js tenga un CACHE_NAME nuevo (ej: v1.3) si el cambio no se ve
     const swPath = window.location.pathname.includes('/Insta-Track/') ? '/Insta-Track/sw.js' : 'sw.js';
-    navigator.serviceWorker.register(swPath).then(reg => {
-      console.log('SW activo en:', reg.scope);
-    }).catch(err => console.log('Error SW:', err));
+    navigator.serviceWorker.register(swPath).catch(err => console.log('Error SW:', err));
   });
 }
 
+// Funciones de utilidad
 window.onload = () => {
   const saved = localStorage.getItem('insta_ghost_list');
   if (saved) document.getElementById('ghostList').value = saved;
@@ -163,8 +139,7 @@ function saveGhosts() {
 function showIndicator() {
   const ind = document.getElementById('saveIndicator');
   ind.style.display = 'block';
-  clearTimeout(window.saveTimer);
-  window.saveTimer = setTimeout(() => ind.style.display = 'none', 1500);
+  setTimeout(() => ind.style.display = 'none', 1500);
 }
 
 function toggleGhost() { document.getElementById('ghostManager').classList.toggle('hidden'); }
@@ -198,7 +173,7 @@ async function extract(file) {
 document.getElementById('processBtn').onclick = async () => {
   const f1 = document.getElementById('fileFollowing').files[0];
   const f2 = document.getElementById('fileFollowers').files[0];
-  if (!f1 || !f2) return alert("Por favor, selecciona ambos archivos.");
+  if (!f1 || !f2) return alert("Selecciona ambos archivos.");
 
   document.getElementById('processBtn').textContent = "🔄 Procesando...";
   
@@ -220,7 +195,7 @@ document.getElementById('processBtn').onclick = async () => {
     document.getElementById('results').classList.remove('hidden');
     document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
   } catch (err) {
-    alert("Error procesando los archivos.");
+    alert("Error al procesar.");
   } finally {
     document.getElementById('processBtn').textContent = "📊 ANALIZAR AHORA";
   }
@@ -234,51 +209,17 @@ function renderList(id, users) {
     const div = document.createElement('div');
     div.className = 'user-row';
     div.id = itemId;
-    div.innerHTML = `
-      <a href="https://www.instagram.com/${u}/" target="_blank" class="user-tag">@${u}</a>
-      <button class="btn-ghost" onclick="addToGhost('${u}', '${itemId}')">👻</button>
-    `;
+    div.innerHTML = `<a href="https://www.instagram.com/${u}/" target="_blank" class="user-tag">@${u}</a><button class="btn-ghost" onclick="addToGhost('${u}', '${itemId}')">👻</button>`;
     container.appendChild(div);
   });
 }
 
 function addToGhost(user, elementId) {
   let list = document.getElementById('ghostList');
-  const currentVal = list.value.trim();
-  list.value = currentVal + (currentVal ? '\n' : '') + user;
+  list.value += (list.value ? '\n' : '') + user;
   saveGhosts();
-  
   const el = document.getElementById(elementId);
-  el.style.opacity = '0';
-  setTimeout(() => el.style.display = 'none', 300);
-  
-  if (elementId.includes('notFollowingLinks')) {
-    let counter = document.getElementById('countNotFollowing');
-    counter.textContent = Math.max(0, parseInt(counter.textContent) - 1);
-  }
-}
-
-function copyToClipboard(id) {
-  const area = document.getElementById(id);
-  area.select();
-  navigator.clipboard.writeText(area.value);
-  alert("Copiado.");
-}
-
-function downloadGhosts() {
-  const blob = new Blob([document.getElementById('ghostList').value], { type: 'text/plain' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'whitelist.txt';
-  a.click();
-}
-
-async function importGhosts(input) {
-  if (!input.files[0]) return;
-  const content = await input.files[0].text();
-  document.getElementById('ghostList').value = content;
-  saveGhosts();
-  alert("Importado.");
+  el.style.display = 'none';
 }
 </script>
 </body>
