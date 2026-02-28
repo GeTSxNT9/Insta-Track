@@ -1,5 +1,9 @@
-# 📸 INSTA-TRACK · [Acceder](https://getsxnt9.github.io/Insta-Track/)
+# INSTA-TRACK
+> AUDITORÍA DE SEGUIDORES Y SEGUIDOS EN INSTAGRAM
 
-> **Visualización y progreso en un vistazo.**
+---
 
-[![App](https://img.shields.io/badge/ABRIR_INSTA--TRACK-8b5cf6?style=for-the-badge&logo=instagram&logoColor=white)](https://getsxnt9.github.io/Insta-Track/)
+[![ACCEDER](https://img.shields.io/badge/ABRIR_HERRAMIENTA-8b5cf6?style=for-the-badge&logo=instagram&logoColor=white)](https://getsxnt9.github.io/Insta-Track/)
+
+---
+*Herramienta personal para la detección de unfollows y cruce de listas de usuarios.*
