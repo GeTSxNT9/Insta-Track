@@ -1,9 +1,9 @@
 # INSTA-TRACK
-> AUDITORÍA DE SEGUIDORES Y SEGUIDOS EN INSTAGRAM
+> INSTAGRAM FOLLOWER AND FOLLOWING AUDIT TOOL
 
 ---
 
-[![ACCEDER](https://img.shields.io/badge/ABRIR_HERRAMIENTA-8b5cf6?style=for-the-badge&logo=instagram&logoColor=white)](https://getsxnt9.github.io/Insta-Track/)
+[![ACCESS](https://img.shields.io/badge/OPEN_TOOL-8b5cf6?style=for-the-badge&logo=instagram&logoColor=white)](https://getsxnt9.github.io/Insta-Track/)
 
 ---
-*Herramienta personal para la detección de unfollows y cruce de listas de usuarios.*
+*Personal tool for unfollow detection and user list cross-referencing.*
